@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:submission/model/makanan_aceh.dart';
+import 'package:submission/model/anime.dart';
 
 class Detail extends StatelessWidget {
-  final MakananAceh makananAceh;
-  const Detail({super.key, required this.makananAceh});
+  final Anime anime;
+  const Detail({super.key, required this.anime});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Detail extends StatelessWidget {
         child: Stack(
           children: [
             Image.asset(
-              makananAceh.imageAsset,
+              anime.imageAsset,
               width: 450,
               height: 500,
               fit: BoxFit.fill,
@@ -50,7 +50,7 @@ class Detail extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  makananAceh.name,
+                                  anime.name,
                                   style: const TextStyle(
                                     fontSize: 22,
                                   ),
@@ -67,7 +67,7 @@ class Detail extends StatelessWidget {
                                   color: Colors.orange,
                                 ),
                                 Text(
-                                  '${makananAceh.rating}',
+                                  '${anime.rating}',
                                 ),
                               ],
                             ),
@@ -93,7 +93,7 @@ class Detail extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 24),
                         child: Text(
-                          makananAceh.description,
+                          anime.description,
                           style: const TextStyle(
                             fontSize: 14,
                           ),
@@ -113,7 +113,7 @@ class Detail extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              'Rp.${makananAceh.price}',
+                              'Rp.${anime.price}',
                               style: const TextStyle(
                                 fontSize: 24,
                               ),

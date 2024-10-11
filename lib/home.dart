@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:submission/makanan_card.dart';
+import 'package:submission/anime_card.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
                   left: 24,
                 ),
                 child: Text(
-                  'Makanan Khas Aceh',
+                  'Anime',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 24),
                 child: Text(
-                  'Kuliner Terbaik',
+                  'Anime Terbaik Sepanjang Masa',
                   style: TextStyle(
                     fontSize: 16,
                     fontStyle: FontStyle.italic,
@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
                 height: 16,
               ),
               Expanded(
-                child: MakananCard(),
+                child: AnimeCard(),
               ),
             ],
           )),

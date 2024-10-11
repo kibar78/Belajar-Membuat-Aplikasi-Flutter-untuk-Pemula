@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:submission/detail.dart';
-import 'package:submission/model/makanan_aceh.dart';
+import 'package:submission/model/anime.dart';
 
-class MakananCard extends StatelessWidget {
-  const MakananCard({super.key});
+class AnimeCard extends StatelessWidget {
+  const AnimeCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,18 +11,17 @@ class MakananCard extends StatelessWidget {
       body: GridView.builder(
         shrinkWrap: true,
         itemBuilder: (context, index) {
-          final MakananAceh items = makananList[index];
+          final Anime items = animeList[index];
           return InkWell(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Detail(makananAceh: items),
+                  builder: (context) => Detail(anime: items),
                 ),
               );
             },
             child: Card(
-              color: Colors.blueAccent,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16.0),
               ),
@@ -87,7 +86,7 @@ class MakananCard extends StatelessWidget {
             ),
           );
         },
-        itemCount: makananList.length,
+        itemCount: animeList.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, childAspectRatio: 2 / 3),
       ),
