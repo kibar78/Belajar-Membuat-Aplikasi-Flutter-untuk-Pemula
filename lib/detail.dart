@@ -15,14 +15,14 @@ class Detail extends StatelessWidget {
           children: [
             Image.asset(
               anime.imageAsset,
-              width: 450,
+              width: 500,
               height: 500,
               fit: BoxFit.fill,
             ),
             ListView(
               children: [
                 const SizedBox(
-                  height: 525,
+                  height: 500,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -38,7 +38,6 @@ class Detail extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      // NOTE : TITLE
                       Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 24,
@@ -52,8 +51,8 @@ class Detail extends StatelessWidget {
                                 Text(
                                   anime.name,
                                   style: const TextStyle(
-                                    fontSize: 22,
-                                  ),
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 const SizedBox(
                                   height: 2,
@@ -65,10 +64,12 @@ class Detail extends StatelessWidget {
                                 const Icon(
                                   Icons.star,
                                   color: Colors.orange,
+                                  size: 26,
                                 ),
+                                const SizedBox(width: 4),
                                 Text(
-                                  '${anime.rating}',
-                                ),
+                                    style: const TextStyle(fontSize: 18),
+                                    '${anime.rating}'),
                               ],
                             ),
                           ],
@@ -83,64 +84,53 @@ class Detail extends StatelessWidget {
                         child: Text(
                           'Description',
                           style: TextStyle(
-                            fontSize: 16,
-                          ),
+                              fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 24),
+                        padding: const EdgeInsets.only(left: 24, right: 24),
                         child: Text(
                           anime.description,
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 24,
+                        margin: const EdgeInsets.only(
+                          left: 24,
+                          right: 24,
                         ),
                         height: 50,
-                        width: MediaQuery.of(context).size.width - (2 * 24),
+                        width: MediaQuery.of(context).size.width,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text(
-                              'Rp.${anime.price}',
-                              style: const TextStyle(
-                                fontSize: 24,
-                              ),
-                            ),
-                            ElevatedButton(
-                              child: const Text(
-                                'Buy Now',
-                                style: TextStyle(
-                                  fontSize: 18,
+                            Row(
+                              children: [
+                                const Text(
+                                  'Rilis : ',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
                                 ),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(17),
+                                Text(
+                                  '${anime.tahun}',
+                                  style: const TextStyle(fontSize: 16),
                                 ),
-                              ),
-                              onPressed: () {
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(SnackBar(
-                                  content: Text("You pressed buy ;)"),
-                                ));
-                              },
+                              ],
                             ),
+                            const FavoriteButton(),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                     ],
@@ -149,17 +139,14 @@ class Detail extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 24,
-                vertical: 30,
-              ),
+              padding: const EdgeInsets.only(left: 24, top: 24),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
                     backgroundColor: Colors.white,
                     child: IconButton(
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back,
                           color: Colors.grey,
                         ),
@@ -167,7 +154,6 @@ class Detail extends StatelessWidget {
                           Navigator.pop(context);
                         }),
                   ),
-                  FavoriteButton(),
                 ],
               ),
             ),
@@ -179,7 +165,10 @@ class Detail extends StatelessWidget {
 }
 
 class FavoriteButton extends StatefulWidget {
+  const FavoriteButton({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _FavoriteButtonState createState() => _FavoriteButtonState();
 }
 
@@ -194,6 +183,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
         icon: Icon(
           isFavorite ? Icons.favorite : Icons.favorite_border,
           color: Colors.red,
+          size: 40,
         ),
         onPressed: () {
           setState(() {

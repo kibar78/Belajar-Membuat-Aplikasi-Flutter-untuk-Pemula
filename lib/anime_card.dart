@@ -31,14 +31,44 @@ class AnimeCard extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                       flex: 6,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          items.imageAsset,
-                          width: 3000,
-                          height: 6000,
-                          fit: BoxFit.fitWidth,
-                        ),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              items.imageAsset,
+                              width: MediaQuery.of(context).size.width,
+                              fit: BoxFit.fitWidth,
+                            ),
+                          ),
+                          Positioned(
+                            top: 4,
+                            right: 4,
+                            child: Container(
+                              padding: const EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(0.7),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Row(
+                                children: [
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.orange,
+                                  ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    '${items.rating}',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(
@@ -63,21 +93,9 @@ class AnimeCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          'Rp.${items.price}',
-                          style: const TextStyle(fontSize: 16),
+                          items.tahun,
+                          style: const TextStyle(fontSize: 14),
                         ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.star,
-                              color: Colors.orange,
-                            ),
-                            Text(
-                              '${items.rating}',
-                              style: const TextStyle(fontSize: 14),
-                            ),
-                          ],
-                        )
                       ],
                     ))
                   ],

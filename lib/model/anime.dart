@@ -1,14 +1,14 @@
 class Anime {
   String name;
   String imageAsset;
-  String price;
+  String tahun;
   String description;
   num rating;
 
   Anime({
     required this.name,
     required this.imageAsset,
-    required this.price,
+    required this.tahun,
     required this.description,
     required this.rating,
   });
@@ -16,108 +16,73 @@ class Anime {
 
 var animeList = [
   Anime(
-      name: 'Dragon Ball Z',
+      name: 'Dragon Ball',
       imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      tahun: '1986',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Dragon Ball bercerita tentang seorang bocah bernama Goku yang hidup di tengah gunung sendirian. Dia lalu bertemu dengan Bulma, seorang gadis muda genius, yang berusaha mengumpulkan 7 bola ajaib yang katanya bisa mengabulkan semua keinginan. Bola-bola tersebut dinamakan Dragon Ball.',
       rating: 8.5),
   Anime(
       name: 'One Piece',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/onepiece.jpg',
+      tahun: '1999 - Sekarang',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'One Piece menceritakan petualangan Monkey D. Luffy, seorang anak laki-laki yang bercita-cita menjadi Raja Bajak Laut. Luffy dan krunya mencari harta karun legendaris yang dikenal sebagai "One Piece" yang disembunyikan di pulau terakhir dari Grand Line: Raftel.',
       rating: 8.9),
   Anime(
       name: 'Naruto',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/naruto.jpg',
+      tahun: '2002 - 2017',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Naruto adalah seorang ninja dari desa Konoha (Konohagakure), sebuah desa fiktif yang konon tersembunyi di antara rimbunnya dedaunan hutan. Sejak kecil ia ditinggal oleh kedua orang tuanya, sehingga ia tidak pernah merasakan bagaimana kasih sayang orang tua kepada anaknya.',
       rating: 8.7),
   Anime(
-      name: 'Pokemon',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
-      description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
-      rating: 7.5),
-  Anime(
       name: 'Detective Conan',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/detective_conan.jpg',
+      tahun: '1996 - 2023',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Serial ini mengisahkan tentang detektif muda bernama Shinichi Kudo yang diracuni oleh kelompok jahat bernama "Organisasi Hitam". Racun tersebut seharusnya membunuhnya, namun malah mengubahnya menjadi seorang anak kecil bernama Edogawa Conan.',
       rating: 8.5),
-  Anime(
-      name: 'Inuyasha',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
-      description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
-      rating: 7.9),
   Anime(
       name: 'Demon Slayer',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/demon_slayer.jpg',
+      tahun: '2019 - Sekarang',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Demon Slayer: Kimetsu no Yaiba adalah serial anime dan manga yang mengisahkan tentang seorang remaja bernama Tanjiro Kamado yang menjadi pembasmi iblis setelah keluarganya dibantai dan adiknya berubah menjadi iblis.',
       rating: 8.6),
   Anime(
-      name: 'Samurai X',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
-      description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
-      rating: 8.5),
-  Anime(
       name: 'Attack On Titan',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/aot.jpg',
+      tahun: '2013 - 2023',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Anime ini berkisah tentang perjalanan laki-laki bernama Eren Yeagar, untuk membalas dendam orang tuanya. Sejak musim pertama tayang, Eren Yeagar dikisahkan sebagai orang yang sangat membenci para Titan karena mereka telah membunuh sang ibu. Sehingga ini memicu Eren untuk membalaskan dendam dan akhirnya bergabung dengan pasukan pemburu Titan bernama Survey Corps.',
       rating: 9.1),
   Anime(
-      name: 'Fairy Tail',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
-      description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
-      rating: 7.9),
-  Anime(
       name: 'One Punch Man',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/onepunchman.jpg',
+      tahun: '2015 - 2019',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Saitama nama karakter utama dalam anime ONE PUNCH MAN ini tidak pernah serius menghadapi musuhnya, karena bagi dia, musuh tersebut seperti serangga yang sedang menempel di tubuhnya. Karakter Saitama memang memiliki citra overpowered atau memiliki kekuatan yang tiada tanding sampai-sampai bisa mengalahkan musuh hanya dengan satu kali pukulan saja.',
       rating: 8.7),
   Anime(
       name: 'Death Note',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/deathnote.jpg',
+      tahun: '2006 - 2007',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Death Note merupakan sebuah buku catatan kematian, yang saat seseorang menuliskan nama orang lain di dalam buku tersebut, maka orang itu akan mengalami kematian. Karena jalan ceritanya yang unik, DEATH NOTE pun diklaim menjadi salah satu anime dengan jalan cerita paling bagus dan cukup kompleks.',
       rating: 8.9),
   Anime(
       name: 'Bleach',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/bleach.jpg',
+      tahun: '2004 - 2023',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'Serial ini bercerita tentang petualangan Ichigo Kurosaki, seorang remaja yang mendapatkan kekuatan Soul Reaper dari Rukia Kuchiki. Kekuatan ini memungkinkan Ichigo untuk membela manusia dari roh jahat, membimbing jiwa yang meninggal ke alam baka, dan membawanya dalam perjalanan ke berbagai alam hantu.',
       rating: 8.2),
   Anime(
-      name: 'Gintama',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
-      description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
-      rating: 8.7),
-  Anime(
       name: 'Hunter X Hunter',
-      imageAsset: 'images/dragonballz.jpg',
-      price: '25.000',
+      imageAsset: 'images/hxh.jpeg',
+      tahun: '2011 - 2014',
       description:
-          'Keumamah adalah sebutan warga Aceh untuk ikan kayu, yaitu ikan tongkol yang dikeringkan sehingga bentuknya mirip dengan kayu. Karena melalui proses pengasinan dan pengeringan, keumamah termasuk makanan yang tahan lama tanpa kulkas. Menurut sejarahnya, keumamah dijadikan sebagai perbekalan pejuang Aceh masa terjadi peperangan dengan penjajah.Ikan ini bisa dijadikan berbagai olahan, misalnya di tumis atau dimasak dengan kuah santan yang sedap.',
+          'HUNTER X HUNTER jadi salah satu rekomendasi anime terbaik sepanjang masa yang tentu sudah cukup populer. Anime yang terdiri atas beberapa seasons ini punya cerita yang sangat seru dan menarik untuk disimak. HUNTER X HUNTER berkisah mengenai Gon seorang anak yang mempunyai keinginan menjadi seorang pemburu terhebat.',
       rating: 8.6),
 ];
