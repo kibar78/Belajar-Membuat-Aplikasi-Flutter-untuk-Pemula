@@ -15,8 +15,7 @@ class Detail extends StatelessWidget {
           children: [
             Image.asset(
               anime.imageAsset,
-              width: 500,
-              height: 500,
+              width: MediaQuery.of(context).size.width,
               fit: BoxFit.fill,
             ),
             ListView(
